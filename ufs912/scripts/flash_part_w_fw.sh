@@ -76,7 +76,7 @@ EOF
 
 if [ "$CREATEMULTI" == "" ]; then
 	md5sum -b $OUTFILE | awk -F' ' '{print $1}' > $OUTFILE.md5
-	zip -j $OUTFILE_Z.zip $OUTFILE $OUTFILE.md5
+	zip -j $OUTFILE_Z.zip $OUTFILE $OUTFILE.md5 $OUTDIR/*.bin
 else
 	zip -j $OUTFILE_Z.zip $OUTDIR/*.bin
 fi
