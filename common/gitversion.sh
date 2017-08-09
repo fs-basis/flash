@@ -32,7 +32,7 @@ elif [ -d $CURDIR/../../source/neutrino-msgbox ]; then
 elif [ -d $CURDIR/../../source/neutrino-fhd-menue ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-fhd-menue && git log | grep "^commit" | wc -l`-neutrino-fhd-menue
 elif [ -d $CURDIR/../../source/neutrino-matze ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-matze && git log | grep "^commit" | wc -l`-neutrino-matze_$date
+	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-matze && git log | grep "^commit" | wc -l`-neutrino-matze
 fi
 
 gitversion="_BASE-rev`(cd $CURDIR/../../ && git log | grep "^commit" | wc -l)`$HAL_REV$NMP_REV$DATETIME"
