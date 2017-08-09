@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CURDIR=$1
-date=`date +%d.%m.%Y-%H.%M`
+DATETIME=_`date +%d.%m.%Y-%H.%M`
 
 if [ -d $CURDIR/../../source/libstb-hal-cst-next ]; then
 	HAL_REV=_HAL-rev`cd $CURDIR/../../source/libstb-hal-cst-next && git log | grep "^commit" | wc -l`-github
@@ -35,7 +35,7 @@ elif [ -d $CURDIR/../../source/neutrino-matze ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-matze && git log | grep "^commit" | wc -l`-neutrino-matze_$date
 fi
 
-gitversion="_BASE-rev`(cd $CURDIR/../../ && git log | grep "^commit" | wc -l)`$HAL_REV$NMP_REV"
+gitversion="_BASE-rev`(cd $CURDIR/../../ && git log | grep "^commit" | wc -l)`$HAL_REV$NMP_REV$DATETIME"
 
 echo "GITVERSION   = $gitversion"
 export gitversion
