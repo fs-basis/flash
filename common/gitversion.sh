@@ -11,8 +11,8 @@ elif [ -d $CURDIR/../../source/libstb-hal-cst-next-tangos ]; then
 	HAL_REV=_HAL-rev`cd $CURDIR/../../source/libstb-hal-cst-next-tangos && git log | grep "^commit" | wc -l`-tangos
 elif [ -d $CURDIR/../../source/libstb-hal ]; then
 	HAL_REV=_HAL-rev`cd $CURDIR/../../source/libstb-hal && git log | grep "^commit" | wc -l`-fs
-elif [ -d $CURDIR/../../source/libstb-hal-new ]; then
-	HAL_REV=_HAL-rev`cd $CURDIR/../../source/libstb-hal-new && git log | grep "^commit" | wc -l`-fs-new
+else
+	HAL_REV=_HAL-revXXX
 fi
 
 if [ -d $CURDIR/../../source/neutrino-mp-cst-next ]; then
@@ -27,12 +27,12 @@ elif [ -d $CURDIR/../../source/neutrino-alpha ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-alpha && git log | grep "^commit" | wc -l`-neutrino-alpha
 elif [ -d $CURDIR/../../source/neutrino-test ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-test && git log | grep "^commit" | wc -l`-neutrino-test
-elif [ -d $CURDIR/../../source/neutrino-msgbox ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-msgbox && git log | grep "^commit" | wc -l`-neutrino-msgbox
-elif [ -d $CURDIR/../../source/neutrino-fhd-menue ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-fhd-menue && git log | grep "^commit" | wc -l`-neutrino-fhd-menue
+eelif [ -d $CURDIR/../../source/neutrino-current ]; then
+	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-current && git log | grep "^commit" | wc -l`-neutrino-current
 elif [ -d $CURDIR/../../source/neutrino-matze ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-matze && git log | grep "^commit" | wc -l`-neutrino-matze
+else
+	NMP_REV=_NMP-revXXX
 fi
 
 gitversion="_BASE-rev`(cd $CURDIR/../../ && git log | grep "^commit" | wc -l)`$HAL_REV$NMP_REV$DATETIME"
