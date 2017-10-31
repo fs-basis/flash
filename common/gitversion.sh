@@ -27,7 +27,7 @@ elif [ -d $CURDIR/../../source/neutrino-alpha ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-alpha && git log | grep "^commit" | wc -l`-neutrino-alpha
 elif [ -d $CURDIR/../../source/neutrino-test ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-test && git log | grep "^commit" | wc -l`-neutrino-test
-eelif [ -d $CURDIR/../../source/neutrino-current ]; then
+elif [ -d $CURDIR/../../source/neutrino-current ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-current && git log | grep "^commit" | wc -l`-neutrino-current
 elif [ -d $CURDIR/../../source/neutrino-matze ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-matze && git log | grep "^commit" | wc -l`-neutrino-matze
