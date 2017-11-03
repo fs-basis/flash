@@ -27,6 +27,9 @@ if [ "$BOXTYPE" == "ufs910" -o "$BOXTYPE" == "ufs922" ];then
 	rm -f $TMPROOTDIR/sbin/mount.ntfs-3g
 	rm -f $TMPROOTDIR/usr/lib/libntfs-3g.so*
 	rm -rf $TMPROOTDIR/usr/lib/ntfs-3g
+
+	rm -rf $TMPROOTDIR/etc/ssl
+	rm -rf $TMPROOTDIR/etc/pem
 fi
 
 if [ "$BOXTYPE" == "ufs910" -o "$BOXTYPE" == "ufs922" -o "$BOXTYPE" == "fortis_hdbox" -o "$BOXTYPE" == "octagon1008" ];then
