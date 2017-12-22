@@ -9,8 +9,8 @@ elif [ -d $CURDIR/../../source/libstb-hal-max ]; then
 	HAL_REV=_HAL-rev`cd $CURDIR/../../source/libstb-hal-max && git log | grep "^commit" | wc -l`-max
 elif [ -d $CURDIR/../../source/libstb-hal-tangos ]; then
 	HAL_REV=_HAL-rev`cd $CURDIR/../../source/libstb-hal-tangos && git log | grep "^commit" | wc -l`-tangos
-elif [ -d $CURDIR/../../source/libstb-hal ]; then
-	HAL_REV=_HAL-rev`cd $CURDIR/../../source/libstb-hal && git log | grep "^commit" | wc -l`-fs
+elif [ -d $CURDIR/../../source/libstb-hal-fs ]; then
+	HAL_REV=_HAL-rev`cd $CURDIR/../../source/libstb-hal-fs && git log | grep "^commit" | wc -l`-fs
 else
 	HAL_REV=_HAL-revXXX
 fi
