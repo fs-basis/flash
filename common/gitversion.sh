@@ -21,14 +21,8 @@ elif [ -d $CURDIR/../../source/neutrino-mp-max ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-mp-max && git log | grep "^commit" | wc -l`-max
 elif [ -d $CURDIR/../../source/neutrino-mp-tangos ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-mp-tangos && git log | grep "^commit" | wc -l`-tangos
-elif [ -d $CURDIR/../../source/neutrino-alpha ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-alpha && git log | grep "^commit" | wc -l`-neutrino-alpha
-elif [ -d $CURDIR/../../source/neutrino-test ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-test && git log | grep "^commit" | wc -l`-neutrino-test
-elif [ -d $CURDIR/../../source/neutrino-current ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-current && git log | grep "^commit" | wc -l`-neutrino-current
-elif [ -d $CURDIR/../../source/neutrino-matze ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-matze && git log | grep "^commit" | wc -l`-neutrino-matze
+elif [ -d $CURDIR/../../source/neutrino-mp-fs ]; then
+	NMP_REV=_NMP-rev`cd $CURDIR/../../source/neutrino-mp-fs && git log | grep "^commit" | wc -l`-fs
 else
 	NMP_REV=_NMP-revXXX
 fi
