@@ -12,9 +12,9 @@ else
 fi
 
 if [ -d $CURDIR/../../build_source/neutrino-ddt ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../build_source/neutrino-mp-fs && git log | grep "^commit" | wc -l`-ddt
+	NMP_REV=_NMP-rev`cd $CURDIR/../../build_source/neutrino-fs && git log | grep "^commit" | wc -l`-ddt
 elif [ -d $CURDIR/../../build_source/neutrino-fs ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../build_source/neutrino-mp-fs && git log | grep "^commit" | wc -l`-fs
+	NMP_REV=_NMP-rev`cd $CURDIR/../../build_source/neutrino-fs && git log | grep "^commit" | wc -l`-fs
 else
 	NMP_REV=_NMP-revXXX
 fi
