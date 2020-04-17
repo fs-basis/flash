@@ -4,7 +4,7 @@ CURDIR=$1
 DATETIME=_`date +%d.%m.%Y-%H.%M`
 
 if [ -d $CURDIR/../../build_source/libstb-hal-ddt ]; then
-	HAL_REV=_HAL-rev`cd $CURDIR/../../build_source/libstb-hal-fs && git log | grep "^commit" | wc -l`-ddt
+	HAL_REV=_HAL-rev`cd $CURDIR/../../build_source/libstb-hal-ddt && git log | grep "^commit" | wc -l`-ddt
 elif [ -d $CURDIR/../../build_source/libstb-hal-fs ]; then
 	HAL_REV=_HAL-rev`cd $CURDIR/../../build_source/libstb-hal-fs && git log | grep "^commit" | wc -l`-fs
 else
@@ -12,7 +12,7 @@ else
 fi
 
 if [ -d $CURDIR/../../build_source/neutrino-ddt ]; then
-	NMP_REV=_NMP-rev`cd $CURDIR/../../build_source/neutrino-fs && git log | grep "^commit" | wc -l`-ddt
+	NMP_REV=_NMP-rev`cd $CURDIR/../../build_source/neutrino-ddt && git log | grep "^commit" | wc -l`-ddt
 elif [ -d $CURDIR/../../build_source/neutrino-fs ]; then
 	NMP_REV=_NMP-rev`cd $CURDIR/../../build_source/neutrino-fs && git log | grep "^commit" | wc -l`-fs
 else
