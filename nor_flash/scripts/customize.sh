@@ -35,6 +35,10 @@ if [ "$BOXTYPE" == "ufs910" -o "$BOXTYPE" == "ufs922" ];then
 	rm -f $TMPROOTDIR/usr/share/tuxbox/neutrino/icons/turkce.png
 	find $TMPROOTDIR/usr/share/tuxbox/neutrino/license -not -name deutsch.license -not -name english.license -type f -delete
 	find $TMPROOTDIR/usr/share/tuxbox/neutrino/locale -not -name deutsch.locale -not -name english.locale -not -name deutsch.po -not -name english.po -type f -delete
+	sed -i -e '/quadpip/d' $TMPROOTDIR/usr/share/tuxbox/neutrino/locale/deutsch.locale
+	sed -i -e '/key_pip/d' $TMPROOTDIR/usr/share/tuxbox/neutrino/locale/deutsch.locale
+	sed -i -e '/quadpip/d' $TMPROOTDIR/usr/share/tuxbox/neutrino/locale/english.locale
+	sed -i -e '/key_pip/d' $TMPROOTDIR/usr/share/tuxbox/neutrino/locale/english.locale
 fi
 
 if [ "$BOXTYPE" == "ufs910" -o "$BOXTYPE" == "ufs922" -o "$BOXTYPE" == "fortis_hdbox" -o "$BOXTYPE" == "octagon1008" ];then
